@@ -33,7 +33,7 @@ Here we train a CNN Resnet Model on the CIFAR-10 dataset using a single GPU as a
 First, inspect the script by running these commands:
 
 ```bash
-$ cat ######.py
+$ cat CIFAR10_ResNet50.py
 ```
 
 We will profile the `train` function using `line_profiler` (see line 39) by adding the following decorator:
