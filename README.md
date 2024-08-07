@@ -16,5 +16,5 @@ $ mamba install line_profiler --channel conda-forge   #optional, needed if you w
 ```
 
 ### Clone this repo and start learning how to run deep learning applications in HPC system. 
-$ git clone https://github.com/uschpc/Building-NeuralNetworks.git
-$ cd Building-NeuralNetworks
+$ git clone https://github.com/uschpc/Running-DL-Applications.git
+$ cd Running-DL-Applications
