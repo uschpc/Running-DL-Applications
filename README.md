@@ -35,8 +35,6 @@ For simplicity we will use a pre-installed Conda environmnet. Run these commands
 
 ```bash
 $ ssh <YourNetID>@discovery.usc.edu
-$ salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00 
-$ conda activate torch-env
 ```
 
 ## Step 2: Run and Profile the Script
@@ -44,7 +42,7 @@ $ conda activate torch-env
 First, inspect the script ([see script](mnist_classify.py)) by running these commands:
 
 ```bash
-(torch-env) $ cat mnist_classify.py
+$ cat mnist_classify.py
 ```
 
 ```
@@ -61,14 +59,6 @@ We will profile the `train` function using `line_profiler` (see line 39) by addi
 @profile
 def train(args, model, device, train_loader, optimizer, epoch):
 ```
-
-Next, download the data on the compute node:
-
-```
-(torch-env) $ python download_mnist.py
-```
-
-After download finished, enter 'exit' to exit from the compute node and return to the login node. 
 
 Below is the Slurm script:
 
@@ -104,7 +94,7 @@ kernprof -o ${SLURM_JOBID}.lprof -l mnist_classify.py --epochs=3
 Finally, submit the job while specifying the reservation:
 
 ```bash
-(torch-env) $ sbatch job.slurm
+$ sbatch job.slurm
 ```
 
 You should find that the code runs in about 20-80 seconds with 1 CPU-core depending on which GPU node was used:
