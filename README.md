@@ -27,11 +27,7 @@ It is important to optimize your script for the single-GPU case before moving to
 
 Here we train a CNN on the MNIST dataset using a single GPU as an example. We profile the code and make performance improvements.
 
-Note: nn.Conv2d(1, 32, 3, 1): This is creating a 2D convolutional layer. Here’s a breakdown of the arguments:
-	1.	1: The number of input channels. This could be 1 for a grayscale image, 3 for a color image (RGB), etc.
-	2.	32: The number of output channels (i.e., the number of filters or kernels). This means that the output of this convolutional layer will have 32 feature maps.
-	3.	3: The size of the convolutional kernel (or filter). This means a 3x3 filter is used for the convolution.
-	4.	1: The stride of the convolution, which controls how the filter moves across the input. A stride of 1 means the filter moves one pixel at a time.
+
 
 ## Step 1: Activate the Environment
 
@@ -49,6 +45,14 @@ First, inspect the script ([see script](mnist_classify.py)) by running these com
 
 ```bash
 (torch-env) $ cat mnist_classify.py
+```
+
+```
+Note: nn.Conv2d(1, 32, 3, 1): This is creating a 2D convolutional layer. Here’s a breakdown of the arguments:
+	1.	1: The number of input channels. This could be 1 for a grayscale image, 3 for a color image (RGB), etc.
+	2.	32: The number of output channels (i.e., the number of filters or kernels). This means that the output of this convolutional layer will have 32 feature maps.
+	3.	3: The size of the convolutional kernel (or filter). This means a 3x3 filter is used for the convolution.
+	4.	1: The stride of the convolution, which controls how the filter moves across the input. A stride of 1 means the filter moves one pixel at a time.
 ```
 
 We will profile the `train` function using `line_profiler` (see line 39) by adding the following decorator:
