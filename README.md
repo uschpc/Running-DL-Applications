@@ -3,11 +3,19 @@
 ### About
 The material in this repo contains workshop materials related to running deep learning applications in HPC system. 
 
-### Software Environment Setup
+# Single-GPU Training
+
+It is important to optimize your script for the single-GPU case before moving to multi-GPU training. This is because as you request more resources, your queue time increases. We also want to avoid wasting resources by running code that is not optimized.
+
+Here we train a CNN on the MNIST dataset using a single GPU as an example. We profile the code and make performance improvements.
+
+## Step 1: Software Environment Setup
+
 First login to CARC OnDemand: https://ondemand.carc.usc.edu/ and request a discovery shell terminal within OpenOnDemand. 
 
 We will use Conda to build software packages. If it is the first time you are using Conda, make sure you follow the guide of how to use Conda with this link: https://www.carc.usc.edu/user-guides/data-science/building-conda-environment
 ```bash
+$ ssh <YourNetID>@discovery.usc.edu
 $ salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00
 $ mamba create --name torch-env
 $ mamba activate torch-env
@@ -21,21 +29,11 @@ $ git clone https://github.com/uschpc/Running-DL-Applications.git
 $ cd Running-DL-Applications
 ```
 
-# Single-GPU Training
-
-It is important to optimize your script for the single-GPU case before moving to multi-GPU training. This is because as you request more resources, your queue time increases. We also want to avoid wasting resources by running code that is not optimized.
-
-Here we train a CNN on the MNIST dataset using a single GPU as an example. We profile the code and make performance improvements.
 
 
 
-## Step 1: Activate the Environment
 
-For simplicity we will use a pre-installed Conda environmnet. Run these commands to activate the environment:
 
-```bash
-$ ssh <YourNetID>@discovery.usc.edu
-```
 
 ## Step 2: Run and Profile the Script
 
