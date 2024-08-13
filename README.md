@@ -42,7 +42,6 @@ $ conda activate torch-env
 First, inspect the script ([see script](mnist_classify.py)) by running these commands:
 
 ```bash
-(torch-env) $ cd multi_gpu_training/01_single_gpu
 (torch-env) $ cat mnist_classify.py
 ```
 
