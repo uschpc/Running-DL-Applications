@@ -171,6 +171,6 @@ In `mnist_classify.py`, change `num_workers` from 1 to 8. And then in `job.slurm
 ## Summary
 
 It is essential to optimize your code before going to multi-GPU training since the inefficiencies will only be magnified otherwise. The more GPUs you request in a Slurm job, the longer you will wait for the job to run. If you can get your work done using an optimized script running on a single GPU then proceed that way. Do not use multiple GPUs if your GPU efficiency is low. 
-Next, we focus on scaling the code to multiple GPUs (go to [next section](../02_pytorch_ddp)).
+
 
 
