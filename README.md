@@ -27,7 +27,7 @@ module purge
 ```
 mamba create --name torch-env
 mamba activate torch-env
-mamba install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+mamba install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 mamba install line_profiler --channel conda-forge   
 ```
 When you finish the installtion, type 'exit' to exit from the interactive session. 
