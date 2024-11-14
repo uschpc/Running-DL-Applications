@@ -59,6 +59,10 @@ Note: nn.Conv2d(1, 32, 3, 1): This is creating a 2D convolutional layer. Here’
 
 We will profile the `train` function using `line_profiler` (see line 39) by adding the following decorator:
 
+```
+$ module load nano
+```
+
 ```python
 @profile
 def train(args, model, device, train_loader, optimizer, epoch):
