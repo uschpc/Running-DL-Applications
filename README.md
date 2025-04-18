@@ -11,7 +11,7 @@ Here we train a CNN on the MNIST dataset using a single GPU as an example. We pr
 
 ## Step 1: Software Environment Setup
 
-First login to CARC OnDemand: https://ondemand.carc.usc.edu/ and request a 'Discovery Cluster Shell Access' within OpenOnDemand. (You need to be conected to USC Secure Wirelss or USC VPN in order to access CARC OnDemand)
+First login to CARC OnDemand: https://ondemand.carc.usc.edu/ and request a 'Discovery Cluster Shell Access' within OpenOnDemand. (You need to be conected to USC Secure Wireless or USC VPN in order to access CARC OnDemand)
 
 We will use Conda to build software packages. If it is the first time you are using Conda, make sure you follow the guide of how to use Conda with this link: https://www.carc.usc.edu/user-guides/data-science/building-conda-environment
 ```bash
