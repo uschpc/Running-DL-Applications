@@ -11,7 +11,7 @@ Here we train a CNN on the MNIST dataset using a single GPU as an example. We pr
 
 ## Step 1: Software Environment Setup
 
-First login to CARC OnDemand: https://ondemand.carc.usc.edu/ and request a 'Discovery Cluster Shell Access' within OpenOnDemand. 
+First login to CARC OnDemand: https://ondemand.carc.usc.edu/ and request a 'Discovery Cluster Shell Access' within OpenOnDemand. (You need to be conected to USC Secure Wirelss or USC VPN in order to access CARC OnDemand)
 
 We will use Conda to build software packages. If it is the first time you are using Conda, make sure you follow the guide of how to use Conda with this link: https://www.carc.usc.edu/user-guides/data-science/building-conda-environment
 ```bash
@@ -50,6 +50,7 @@ $ cat mnist_classify.py
 ```
 
 ```
+This is for explaining how to build a simple Convolutioanl Layer in PyTorch. 
 Note: nn.Conv2d(1, 32, 3, 1): This is creating a 2D convolutional layer. Here’s a breakdown of the arguments:
 (a) 1: The number of input channels. This could be 1 for a grayscale image, 3 for a color image (RGB), etc.
 (b) 32: The number of output channels (i.e., the number of filters or kernels). This means that the output of this convolutional layer will have 32 feature maps.
