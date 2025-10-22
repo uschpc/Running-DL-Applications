@@ -25,8 +25,8 @@ source ~/.bashrc
 module purge
 ```
 ```
-mamba create --name torch-env
-mamba activate torch-env
+mamba create --name torch-env-workshop
+mamba activate torch-env-workshop
 mamba install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 mamba install line_profiler --channel conda-forge   
 ```
@@ -93,7 +93,7 @@ module purge
 
 eval "$(conda shell.bash hook)"
 
-conda activate torch-env
+conda activate torch-env-workshop
 
 kernprof -o ${SLURM_JOBID}.lprof -l mnist_classify.py --epochs=3
 ```
