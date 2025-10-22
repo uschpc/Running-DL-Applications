@@ -21,6 +21,6 @@ module purge
 
 eval "$(conda shell.bash hook)"
 
-conda activate torch-env
+conda activate torch-env-workshop
 
 kernprof -o ${SLURM_JOBID}.lprof -l mnist_classify.py --epochs=3
