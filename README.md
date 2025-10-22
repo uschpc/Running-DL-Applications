@@ -34,8 +34,6 @@ When you finish the installtion, type 'exit' to exit from the interactive sessio
 
 ### Clone this repo and start learning how to run deep learning applications in HPC system. 
 ```bash
-module load gcc/13.3.0
-module load git
 git clone https://github.com/uschpc/Running-DL-Applications.git
 cd Running-DL-Applications
 ```
